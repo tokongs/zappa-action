@@ -1,0 +1,11 @@
+name: Zappa action
+description: Execute Zappa commands
+inputs:
+  command:
+    description: Zappa command to execute
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
